@@ -1,5 +1,7 @@
 # graphenda-shared
 
+![CI](https://github.com/USER/graphenda-shared/workflows/CI/badge.svg)
+
 Shared Python contract between the two Graphenda pillars:
 
 - **`graphenda-build`** — offline graph engine (ingestion, transformation, materialization).
