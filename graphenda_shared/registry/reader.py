@@ -24,7 +24,7 @@ class RegistryReader:
         return [
             f.stem
             for f in self.registry_dir.glob("*.yaml")
-            if not f.name.startswith("_")
+            if not f.name.startswith(("_", "."))
         ]
 
     def load(self, slug: str) -> GraphRegistryEntry:

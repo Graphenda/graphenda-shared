@@ -1,6 +1,6 @@
 [project]
 name = "graphenda-shared"
-version = "0.1.0"
+version = "0.1.1"
 description = "Shared models, configuration and Neo4j interface used by graphenda-build and graphenda-saas."
 readme = "README.md"
 requires-python = ">=3.11"

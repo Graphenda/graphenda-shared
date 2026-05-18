@@ -10,7 +10,7 @@ import graphenda_shared
 
 def test_package_has_version() -> None:
     assert hasattr(graphenda_shared, "__version__")
-    assert graphenda_shared.__version__ == "0.1.0"
+    assert graphenda_shared.__version__ == "0.1.1"
 
 
 def test_imports_config() -> None:
@@ -97,6 +97,17 @@ def test_imports_registry_reader() -> None:
 
     assert reader is not None
     assert hasattr(reader, "RegistryReader")
+
+
+def test_registry_reader_skips_dotfiles_and_underscore(tmp_path) -> None:
+    """list_slugs must skip both `_*.yaml` and `.*.yaml`."""
+    from graphenda_shared.registry.reader import RegistryReader
+
+    (tmp_path / "panelbox.yaml").write_text("slug: panelbox\n")
+    (tmp_path / "_schema.yaml").write_text("slug: _schema\n")
+    (tmp_path / ".pre-commit-config.yaml").write_text("repos: []\n")
+
+    assert RegistryReader(tmp_path).list_slugs() == ["panelbox"]
 
 
 def test_top_level_reexports() -> None:
