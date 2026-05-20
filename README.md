@@ -111,3 +111,15 @@ Pre-commit hooks are installed by `make install`; they run `ruff`, `black`,
 - Master plan: [`../PLANO-DIVISAO-EM-PROJETOS.md`](../PLANO-DIVISAO-EM-PROJETOS.md), section 5.1
   (contract / versioning policy).
 - `CHANGELOG.md` — every released version.
+
+## Licença
+
+Distribuído sob a **Business Source License 1.1** (BUSL-1.1) — ver [`LICENSE`](./LICENSE).
+
+- **Licensor**: Graphenda
+- **Additional Use Grant**: uso não-concorrente (não pode oferecer `graphenda-shared`,
+  ou derivado, como serviço gerenciado a terceiros).
+- **Change Date**: 2029-05-20 — nessa data o código converte automaticamente para
+  **Apache License, Version 2.0**.
+
+Para usos fora do Additional Use Grant durante a janela BSL, entre em contato com o Licensor.
