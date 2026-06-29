@@ -36,6 +36,12 @@ class ChunkType(str, Enum):
     NOTEBOOK_CELL_GROUP = "notebook_cell_group"
     PDF_SECTION = "pdf_section"
     CSV_METADATA = "csv_metadata"
+    CSV_ROW_GROUP = "csv_row_group"
+    DOCX_SECTION = "docx_section"
+    TXT_SECTION = "txt_section"
+    HTML_SECTION = "html_section"
+    DB_SCHEMA    = "db_schema"
+    DB_ROW_GROUP = "db_row_group"
 
 
 # --- Data Models ---
